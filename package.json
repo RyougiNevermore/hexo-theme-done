@@ -1,0 +1,24 @@
+{
+  "name": "done",
+  "version": "1.0.0",
+  "description": "hexo theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyougiNevermore/hexo-theme-done.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "done"
+  ],
+  "author": "ryougi",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RyougiNevermore/hexo-theme-done/issues"
+  },
+  "homepage": "https://github.com/RyougiNevermore/hexo-theme-done#readme"
+}
