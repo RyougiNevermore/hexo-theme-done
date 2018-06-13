@@ -1,0 +1,307 @@
+@media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
+(max-width: 512px)  and (min-resolution: 1.5dppx),
+(max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
+(max-width: 1024px) and (max-resolution: 1.5dppx) {
+}
+@media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
+(min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
+(min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
+(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+
+}
+@media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
+(min-width: 1025px) and (min-resolution: 1.5dppx),
+(min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
+(min-width: 2049px) and (max-resolution: 1.5dppx) {
+
+}
+
+body .done {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.done .center {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.done .text--bold {
+    font-weight: bold;
+}
+
+/* header */
+.done .header {
+    background-color: #041034;
+}
+
+.done .header .mdl-layout__header,
+.done .header .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+
+.done .header .mdl-navigation .actived {
+    color: rgb(255,64,129);
+}
+
+.done .header .mdl-layout__header-row {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.done .mdl-layout__title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.done .is-compact .mdl-layout__title span {
+    display: none;
+}
+
+.done .logo-row {
+    min-height: 200px;
+}
+
+.done .is-compact .logo-row {
+    min-height: auto;
+}
+
+.done .logo {
+    background: url(../image/logo.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 400px;
+    margin: auto auto 10px;
+}
+
+.done .is-compact .logo {
+    height: 50px;
+    width: 50px;
+    margin-top: 7px;
+}
+
+.done .header-small {
+    background-color: #041034;
+    color: white;
+}
+
+.done .logo-row-small {
+    min-height: 60px;
+}
+
+.done .logo-small {
+    background: url(../image/logo.png) 50% no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+    margin: auto auto 10px;
+}
+
+.done .mdl-layout__drawer-button {
+    color: white;
+}
+
+/* main */
+.done .mdl-layout__content {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.done .page-content {
+    max-width: 900px;
+    min-height: 600px;
+    padding: 0;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* card */
+.done .mdl-card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 360px;
+}
+
+.done .mdl-card .mdl-card__title {
+    color: #fff;
+    height: 300px;
+    padding: 16px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.done .mdl-card .mdl-card__title h2:before, .done .mdl-card .mdl-card__title h2:after {
+    content: '';
+    border-bottom: solid 2px white;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+}
+
+.done .mdl-card .mdl-card__title h2.mdl-card__title-text {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.done .mdl-card .mdl-card__title h2:before { left: 0; }
+.done .mdl-card .mdl-card__title h2:after { right: 0; }
+
+.done .mdl-card .mdl-card__title h2:hover:before, .done .mdl-card .mdl-card__title h2:hover:after {
+    width: 50%;
+}
+
+.done .mdl-card .mdl-card__title h2:before, .done .mdl-card .mdl-card__title h2:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.done .mdl-card .mdl-card__supporting-text {
+    width: auto;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.done .mdl-card .create_time {
+    font-size: 12px;
+    font-weight: bold;
+    display: inline;
+    float: right;
+}
+
+.done .mdl-card .mdl-card__actions {
+    width: auto;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.done .mdl-card .tag {
+    cursor: pointer;
+}
+
+.done  .mdl-card__menu {
+    color: #fff;
+}
+
+/* page */
+.done .pagination-nav {
+    margin: 30px 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+
+.done .pagination-nav .pagination-nav__button {
+    color: grey;
+    text-decoration: none;
+}
+
+.done .pagination-nav .pagination-nav__number {
+    color: grey;
+}
+
+/* tag list */
+.done .tags .tag-list-item {
+    display: block;
+    display: -webkit-box;
+    display: -ms-grid;
+}
+
+.done .tags .tag-list-item .tag {
+    cursor: pointer;
+}
+
+/* post */
+.done .post .meta {
+    box-sizing: border-box;
+    padding: 16px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.done .post .extra {
+    margin: 0 auto;
+}
+
+/* about */
+.done .about .title__text {
+    color: rgb(255,64,129);
+}
+
+.done .about .subtitle__text {
+    text-align: center;
+}
+
+.done .about .promo {
+    width: 100%;
+}
+
+.done .about .content {
+    padding: 10px;
+}
+
+.done .about .hp {
+    width: 100%;
+    height: 100%;
+    border-radius:100%;
+}
+
+.done .about .hp-small {
+    width: 80px;
+    height: 80px;
+    border-radius:100%;
+}
+
+.done .about .me {
+    position: relative;
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+/* footer */
+.done footer {
+    margin-top: 30px;
+    background-image: url(../image/footer-background.png);
+    background-size: cover;
+}
