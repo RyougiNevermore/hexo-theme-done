@@ -1,13 +1,20 @@
 global:
-  search_input_hint: "Search"
+  header:
+    search_placeholder: 'Search'
+    menu_home: 'Home'
+    menu_tag: 'Tag'
+    menu_github: 'Github'
+    menu_about: 'About'
+  footer:
+    privacy_terms: 'Privacy & Terms'
+
+posts:
+  read: 'READ'
 
 post:
-  continue_reading: "Continue reading"
-  last_updated: "Last updated: "
+  discussion: 'DISCUSSION'
 
-footer:
-  license: 'This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.'
+about:
+  donate: 'DONATE'
+  join: 'JOIN'
 
-tag:
-  all: "All"
-  tags: "Tags"
