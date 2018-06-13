@@ -1,0 +1,60 @@
+<header class="mdl-layout__header mdl-layout__header--scroll header">
+    <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="page_search">
+                    <i class="material-icons">search</i>
+                </label>
+
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="page_search" >
+                    <label class="mdl-textfield__label" for="page_search" ><%= __('global.header.search_placeholder') %></label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mdl-layout__header-row logo-row">
+                <span class="mdl-layout__title">
+                    <div class="logo"></div>
+                    <span class="mdl-layout__title"><%= config.title %></span>
+                </span>
+    </div>
+    <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+            <%
+                var homeActived = ''
+                if (is_home()) {
+                    homeActived = 'actived'
+                }
+                var tagActived = ''
+                if (is_current('tag')) {
+                    tagActived = 'actived'
+                }
+                var aboutActived = ''
+                if (is_current('about')) {
+                    aboutActived = 'actived'
+                }
+            %>
+            <a class="mdl-navigation__link <%- homeActived %>" href="/"><i class="material-icons">explore</i>&nbsp;<%= __('global.header.menu_home') %></a>
+            <a class="mdl-navigation__link <%- tagActived %>" href="/tags/"><i class="material-icons">local_offer</i>&nbsp;<%= __('global.header.menu_tag') %></a>
+            <a class="mdl-navigation__link" href="https://github.com/RyougiNevermore" target="_blank"><i class="material-icons">link</i>&nbsp;<%= __('global.header.menu_github') %></a>
+            <a class="mdl-navigation__link <%- aboutActived %>" href="/about/"><i class="material-icons">notes</i>&nbsp;<%= __('global.header.menu_about') %></a>
+        </nav>
+    </div>
+</header>
+
+<div class="mdl-layout--small-screen-only header-small ">
+    <div class="logo-small"></div>
+</div>
+
+<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <span class="mdl-layout-title"><%= config.title %></span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href=""><i class="material-icons">explore</i>&nbsp;<%= __('global.header.menu_home') %></a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">local_offer</i>&nbsp;<%= __('global.header.menu_tag') %></a>
+        <a class="mdl-navigation__link" href="https://github.com/RyougiNevermore" target="_blank"><i class="material-icons">link</i>&nbsp;<%= __('global.header.menu_github') %></a>
+        <a class="mdl-navigation__link" href=""><i class="material-icons">notes</i>&nbsp;<%= __('global.header.menu_about') %></a>
+    </nav>
+</div>
