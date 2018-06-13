@@ -1,0 +1,85 @@
+<!-- pagination -->
+<nav class="pagination-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <% if (page.prev > 0 ) { %>
+    <a href="<%- url_for(page.prev_link) %>" class="pagination-nav__button">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons">arrow_back</i>
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+        </button>
+    </a>
+    <% } else { %>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple" disabled>
+        <i class="material-icons">arrow_back</i>
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+    </button>
+    <% } %>
+    <div class="section-spacer">
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+
+            <a href="index.html" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
+                    1
+                </button>
+            </a>
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey" disabled>
+                    ...
+                </button>
+            <a href="index.html" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
+                    2222
+                </button>
+            </a>
+            <a href="index.html" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
+                    3222
+                </button>
+            </a>
+            <a href="index.html" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
+                    422
+                </button>
+            </a>
+            <a href="" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey" disabled>
+                    ...
+                </button>
+            </a>
+            <a href="index.html" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
+                    422
+                </button>
+            </a>
+        </nav>
+
+        <nav class="mdl-navigation mdl-layout--small-screen-only">
+            <span class="pagination-nav__number mdl-color-text--grey"><%= page.current %></span>
+        </nav>
+    </div>
+    <% if (page.next > 0 ) { %>
+    <a href="<%- url_for(page.next_link) %>" class="pagination-nav__button">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons">arrow_forward</i>
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+        </button>
+    </a>
+    <% } else { %>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple" disabled>
+        <i class="material-icons">arrow_forward</i>
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+    </button>
+    <% } %>
+</nav>
+<div>
+    <%- paginator({
+        prev_text: '上一页',
+        next_text: '下一页'
+    }) %>
+</div>
+<div>
+    <%= page.per_page %><br>
+    <%= page.total %><br>
+    <%= page.current_url %><br>
+    <%= page.prev_link %><br>
+    <%= page.path %><br>
+    <%= page.next_link %><br>
+</div>
