@@ -1,0 +1,52 @@
+<!-- page card >>> -->
+<% page.posts.each(function(post){ %>
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+    <!-- title and bg -->
+
+    <% var post_featured_image = '' %>
+    <% if (post.featured_image){
+        post_featured_image = post.featured_image;
+    } else {
+        post_featured_image = url_for('/material/' + materialImageMap(post.title));
+    }
+    %>
+    <div class="mdl-card__title" onclick="jump('<%- url_for(post.path); %>')" style="background: url('<%- post_featured_image %>') center / cover; cursor: pointer;">
+        <h2 class="mdl-card__title-text text--bold" onclick="jump('<%- url_for(post.path); %>')">
+            <%= post.title %>
+        </h2>
+    </div>
+    <!-- description -->
+    <div class="mdl-card__supporting-text">
+        <p class="description">
+            <% if (post.description) { %>
+            <%- strip_html(post.description) %>
+            <% } else { %>
+            <%- truncate(strip_html(post.content), {length: 300}) %>
+            <% } %>
+        </p>
+        <div class="create_time">
+            <%- full_date(post.date, 'Wo MMMM Do YYYY') %>
+        </div>
+    </div>
+    <% if (post.tags && post.tags.length) { %>
+    <div class="mdl-card__supporting-text padding-top-0 ">
+        <%   post.tags.forEach(function (tag, index) { %>
+        <a href="<%- url_for(tag.path) %>" class="mdl-chip tag">
+            <span class="mdl-chip__text mdl-color-text--grey-600"><%- tag.name %></span>
+        </a>
+        <%  }); %>
+    </div>
+    <% } %>
+    <!-- tags -->
+    <div class="mdl-card__actions mdl-card--border">
+        <div class="mdl-grid padding-0" >
+            <div class="mdl-cell mdl-cell--12-col" >
+                <button class="mdl-button mdl-js-button mdl-button--accent mdl-color--grey-200 center" onclick="jump('<%- url_for(post.path); %>')">
+                    <%= __('posts.read') %>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <<< page card -->
+<% }) %>

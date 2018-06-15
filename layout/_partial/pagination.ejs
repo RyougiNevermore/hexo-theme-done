@@ -69,17 +69,13 @@
     </button>
     <% } %>
 </nav>
+
 <div>
-    <%- paginator({
-        prev_text: '上一页',
-        next_text: '下一页'
-    }) %>
-</div>
-<div>
-    <%= page.per_page %><br>
-    <%= page.total %><br>
-    <%= page.current_url %><br>
-    <%= page.prev_link %><br>
-    <%= page.path %><br>
-    <%= page.next_link %><br>
+    per_page: <%= page.per_page %><br>
+    total: <%= page.total %><br>
+    current_url: <%= page.current_url %><br>
+    prev_link: <%= page.prev_link %><br>
+    path: <%= page.path %><br>
+    next_link: <%= page.next_link %><br>
+    base: <%= page %><br>
 </div>

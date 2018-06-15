@@ -26,6 +26,19 @@ body .done {
     margin: 0 auto;
 }
 
+.done .padding-0 {
+    padding: 0;
+}
+
+.done .padding-top-0 {
+    padding-top: 0;
+}
+
+.done .padding-bottom-0 {
+    padding-bottom: 0;
+}
+
+
 .done .text--bold {
     font-weight: bold;
 }
@@ -180,6 +193,7 @@ body .done {
 }
 
 .done .mdl-card .create_time {
+    position: relative;
     font-size: 12px;
     font-weight: bold;
     display: inline;
