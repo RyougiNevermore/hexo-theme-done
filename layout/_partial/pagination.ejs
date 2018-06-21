@@ -1,7 +1,7 @@
 <!-- pagination -->
 <nav class="pagination-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <% if (page.prev > 0 ) { %>
-    <a href="<%- url_for(page.prev_link) %>" class="pagination-nav__button">
+    <a href="<%= url_for(page.prev_link) %>" class="pagination-nav__button">
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple">
             <i class="material-icons">arrow_back</i>
             <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
@@ -15,40 +15,32 @@
     <% } %>
     <div class="section-spacer">
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-
-            <a href="index.html" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
-                    1
+            <%
+            var pages = pagination('', page);
+            %>
+            <%
+            pages.forEach(function (pageItem) {
+                var linkStyle = 'mdl-color-text--grey';
+                if (pageItem.isCurrent === true) {
+                    linkStyle = 'mdl-button--accent';
+                }
+                if (pageItem.isLink === false) {
+            %>
+            <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey" disabled>
+                <%= pageItem.text %>
+            </button>
+            <%
+                } else {
+            %>
+            <a href="<%= url_for(pageItem.path) %>" class="pagination-nav__button">
+                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect <%= linkStyle %> ">
+                    <%= pageItem.text %>
                 </button>
             </a>
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey" disabled>
-                    ...
-                </button>
-            <a href="index.html" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
-                    2222
-                </button>
-            </a>
-            <a href="index.html" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
-                    3222
-                </button>
-            </a>
-            <a href="index.html" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
-                    422
-                </button>
-            </a>
-            <a href="" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey" disabled>
-                    ...
-                </button>
-            </a>
-            <a href="index.html" class="pagination-nav__button">
-                <button class="mdl-navigation__link mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--grey">
-                    422
-                </button>
-            </a>
+            <%
+                }
+            });
+            %>
         </nav>
 
         <nav class="mdl-navigation mdl-layout--small-screen-only">
@@ -56,7 +48,7 @@
         </nav>
     </div>
     <% if (page.next > 0 ) { %>
-    <a href="<%- url_for(page.next_link) %>" class="pagination-nav__button">
+    <a href="<%= url_for(page.next_link) %>" class="pagination-nav__button">
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey mdl-color-text--white" role="presentation" data-upgraded=",MaterialButton,MaterialRipple">
             <i class="material-icons">arrow_forward</i>
             <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
@@ -69,13 +61,3 @@
     </button>
     <% } %>
 </nav>
-
-<div>
-    per_page: <%= page.per_page %><br>
-    total: <%= page.total %><br>
-    current_url: <%= page.current_url %><br>
-    prev_link: <%= page.prev_link %><br>
-    path: <%= page.path %><br>
-    next_link: <%= page.next_link %><br>
-    base: <%= page %><br>
-</div>
