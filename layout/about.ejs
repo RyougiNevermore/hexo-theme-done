@@ -1,1 +1,148 @@
-about
+<div class="page-content about">
+    <!-- page card >>> -->
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col ">
+            <h2 class="title__text">Welcome to Crazy Ana</h2>
+            <h4><i class="material-icons">format_quote</i>Share about Crazy Programming and Crazy Idea.</h4>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <hr/>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col ">
+            <h2 class="title__text">Principles</h2>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+            <img src="<%= url_for('image/programming.jpg') %>" class="promo">
+            <h6 class="subtitle__text">Programming</h6>
+            <p class="content">
+                <i class="material-icons">format_quote</i>
+                <a href="https://en.wikipedia.org/wiki/Programming" target="_blank" >Programming</a> is an academic discipline.
+                Here, I will share some of what I've learned about programming in an objective way.
+                May be valid, or it may be ineffective.
+                Programming is developing rapidly, that we need a clear understanding of it to make programming easy and more efficient.
+            </p>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <img src="<%= url_for('image/hexo.png') %>" class="promo">
+            <h6 class="subtitle__text">Hexo & Done</h6>
+            <p class="content">
+                <i class="material-icons">format_quote</i>
+                The Crazy Ana is based on <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="#" target="_blank">Done</a> theme.
+                The Hexo is a fast, simple & powerful blog framework.
+                The Done theme of Hexo is made by me, used <a href="https://getmdl.io/" target="_blank" >Google Material Design Lite</a>.
+            </p>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <img src="<%= url_for('image/terms.png') %>" class="promo">
+            <h6 class="subtitle__text">Terms</h6>
+            <p class="content">
+                <i class="material-icons">format_quote</i>
+                Crazy Ana is under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">Attribution-NonCommercial-ShareAlike 4.0 International</a> term.
+                You are free to share — copy and redistribute the material in any medium or format,
+                and adapt — remix, transform, and build upon the material.
+                But you may not use the material for commercial purposes.
+            </p>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <hr/>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col ">
+            <h2 class="title__text">Who am I</h2>
+        </div>
+    </div>
+    <div class="mdl-grid mdl-layout--large-screen-only">
+        <div class="mdl-cell mdl-cell--2-col ">
+            <img src="<%= url_for('image/ph.jpg') %>" class="hp">
+        </div>
+        <div class="mdl-cell mdl-cell--10-col ">
+            <p class="content">
+                <i class="material-icons">format_quote</i>
+                Hello! I am Wang Min Xiang, a <strong>Programming Architect</strong> based in Shanghai, CN. I enjoy working on <strong>usable</strong>, <strong>practical</strong> and <strong>amazing</strong> programming project.
+            </p>
+        </div>
+    </div>
+    <div class="mdl-grid mdl-layout--small-screen-only">
+        <div class="mdl-cell mdl-cell--12-col ">
+            <div class="me">
+                <img src="<%= url_for('image/ph.jpg') %>" class="hp-small" >
+                <p class="content">
+                    <i class="material-icons">format_quote</i>Hello! I am Wang Min Xiang, a Programming Architect based in Shanghai, CN. I enjoy working on usable, practical and amazing programming project.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <hr/>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+            <h6 class="subtitle__text">Help Crazy Ana Grow</h6>
+            <p class="content">
+                <i class="material-icons">format_quote</i>I hope you have enjoyed using Crazy Ana and if you feel like it has helped you out and want to support the project you can help me by donating or start it on <a href="https://github.com/RyougiNevermore/ryouginevermore.github.io" target="_blank">Github</a>.
+                Any amount would help support and continue development on this project and is greatly appreciated.
+            </p>
+            <button id="donate-btn" onclick="showDialog('donate-dialog');" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Donate
+            </button>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <h6 class="subtitle__text">Join the Discussion</h6>
+            <p class="content">
+                <i class="material-icons">format_quote</i>
+                It has a <a href="https://github.com/RyougiNevermore/ryouginevermore.github.io/issues/23" target="_blank">Github Issue Room</a> set up where you can talk directly with us.
+                Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.
+            </p>
+            <a href="https://github.com/RyougiNevermore/ryouginevermore.github.io/issues/23" target="_blank">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Join
+                </button>
+            </a>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <h6 class="subtitle__text">Connect</h6>
+            <p class="content">
+                <iframe src="https://ghbtns.com/github-btn.html?user=ryouginevermore&amp;repo=ryouginevermore.github.io&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                <br>
+                <a href="https://github.com/RyougiNevermore" >Follow @RyougiNevermore</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- donate-dialog -->
+    <dialog id="donate-dialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">
+            Donate
+        </h4>
+        <div class="mdl-dialog__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col">
+                    <h6>AliPay</h6>
+                    <img class="promo" src="images/pay_ali.jpg">
+                </div>
+                <div class="mdl-cell mdl-cell--6-col">
+                    <h6>WechatPay</h6>
+                    <img class="promo" src="images/pay_wx.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect close">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
+    </dialog>
+
+</div>
