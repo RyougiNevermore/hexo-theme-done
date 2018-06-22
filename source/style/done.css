@@ -280,6 +280,10 @@ body .done {
     margin: 0 auto;
 }
 
+.done .post .post-content img {
+    max-width: 100%;
+}
+
 /* about */
 .done .about .title__text {
     color: rgb(255,64,129);
