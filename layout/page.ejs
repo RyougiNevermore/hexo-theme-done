@@ -1,1 +1,6 @@
-page
+<%  if (page.title === 'about') { %>
+<%- partial('about') %>
+<% } %>
+<%  if (page.title === 'tag') { %>
+<%- partial('tags') %>
+<% } %>
