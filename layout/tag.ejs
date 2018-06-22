@@ -1,1 +1,12 @@
-tags
+<div class="page-content tag">
+    <!-- Your content goes here -->
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp" style="display: -ms-flex; text-align: center; height: 70px;">
+            <h4 class="text--main"><%= page.tag %></h4>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <%- partial('_partial/posts') %>
+        <%- partial('_partial/pagination', {'basePath':'tags/' + page.tag }) %>
+    </div>
+</div>
