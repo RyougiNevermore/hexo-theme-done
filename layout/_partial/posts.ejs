@@ -1,5 +1,5 @@
 <!-- page card >>> -->
-<% page.posts.each(function(post){ %>
+<% page.posts.forEach(function(post){ %>
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
     <!-- title and bg -->
 
@@ -31,7 +31,7 @@
     <% if (post.tags && post.tags.length) { %>
     <div class="mdl-card__supporting-text padding-top-0 ">
         <%   post.tags.forEach(function (tag, index) { %>
-        <a href="<%- url_for(tag.path) %>" class="mdl-chip tag">
+        <a href="<%= url_for(tag.path) %>" class="mdl-chip tag">
             <span class="mdl-chip__text mdl-color-text--grey-600"><%- tag.name %></span>
         </a>
         <%  }); %>
