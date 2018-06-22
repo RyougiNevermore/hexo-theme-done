@@ -1,0 +1,56 @@
+<div class="page-content tags">
+    <% if (site.tags === undefined || site.tags.length === 0) {
+    %>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <h3 class="text--main">No Tags</h3>
+        </div>
+    </div>
+    <%
+        } else {
+    %>
+    <% var groupTags = tag_pinyin_groups(site.tags); %>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <h4 class="text--main">Tags</h4>
+        </div>
+    </div>
+    <div class="mdl-grid">
+        <ul class="mdl-cell mdl-cell--12-col mdl-list ">
+        <%
+            groupTags.forEach(function (groupTag) {
+                var group_name = groupTag.name;
+                var group_list = groupTag.list;
+
+        %>
+            <li class="mdl-list__item mdl-shadow--2dp">
+                <div class="mdl-list__item-primary-content tag-list-item">
+        <%
+                group_list.forEach(function (tag) {
+        %>
+                    <a href="<%- url_for(tag.path) %>" class="mdl-chip tag">
+                        <span class="mdl-chip__text "><%= tag.name %></span>
+                    </a>
+        <%
+                });
+
+        %>
+                </div>
+                <div class="mdl-list__item-secondary-content">
+                    <div class="mdl-chip">
+                        <span class="mdl-chip__text mdl-badge" data-badge="<%= group_list.length %>"><%= group_name %></span>
+                    </div>
+
+                </div>
+            </li>
+        <%
+            });
+        %>
+
+        </ul>
+    </div>
+    <%
+        }
+    %>
+
+</div>
