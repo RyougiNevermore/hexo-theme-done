@@ -43,6 +43,10 @@ body .done {
     font-weight: bold;
 }
 
+.done .text--main {
+    color: rgb(255,64,129);
+}
+
 /* header */
 .done .header {
     background-color: #041034;
