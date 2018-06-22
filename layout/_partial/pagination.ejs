@@ -16,7 +16,7 @@
     <div class="section-spacer">
         <nav class="mdl-navigation mdl-layout--large-screen-only">
             <%
-            var pages = pagination('', page);
+            var pages = pagination(basePath, page);
             %>
             <%
             pages.forEach(function (pageItem) {
