@@ -2,7 +2,7 @@ global:
   header:
     search_placeholder: 'Search'
     menu_home: 'Home'
-    menu_tag: 'Tag'
+    menu_tag: 'Archives'
     menu_github: 'Github'
     menu_about: 'About'
   footer:
