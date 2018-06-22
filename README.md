@@ -2,7 +2,7 @@
 
 
 ## Installation
-    git clone git@github.com:RyougiNevermore/hexo-theme-done.git hexo/theme/done
+    git clone git@github.com:RyougiNevermore/hexo-theme-done.git hexo/themes/done
     npm install pinyin
 
 
