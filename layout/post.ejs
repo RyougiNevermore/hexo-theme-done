@@ -1,0 +1,69 @@
+<% var post_featured_image = '' %>
+<%
+if (page.featured_image){
+    post_featured_image = page.featured_image;
+} else {
+    post_featured_image = url_for('/material/' + materialImageMap(page.title));
+}
+%>
+<div class="page-content post mdl-grid">
+    <!-- page card >>> -->
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+        <!-- title and bg -->
+        <div class="mdl-card__title" style="background: url('<%- post_featured_image %>') center / cover; cursor: pointer;">
+            <h2 class="mdl-card__title-text">
+                <%= page.title %>
+            </h2>
+        </div>
+        <!-- create time -->
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                <div><strong><%- full_date(page.date, 'Wo MMMM Do YYYY') %></strong></div>
+            </div>
+        </div>
+        <!-- description -->
+        <div class="mdl-card__supporting-text">
+            <div class="mdl-grid post-content">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <%- page.content %>
+                </div>
+            </div>
+        </div>
+        <!-- tags -->
+        <%
+        if (page.tags !== undefined && page.tags.length > 0) {
+        %>
+        <div class="mdl-card__actions ">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+        <%
+            page.tags.forEach(function (tag) {
+        %>
+                    <a href="<%- url_for(tag.path) %>" class="mdl-chip tag">
+                        <span class="mdl-chip__text mdl-color-text--grey-600"><%= tag.name %></span>
+                    </a>
+        <%
+            });
+        %>
+                </div>
+            </div>
+        </div>
+        <%
+        }
+        %>
+        <%
+        if (page.issue !== undefined && page.issue !== '') {
+        %>
+        <div class="mdl-card__actions extra">
+            <a href="<%- page.issue %>" target="_blank">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                    Discussion
+                </button>
+            </a>
+        </div>
+        <%
+        }
+        %>
+    </div>
+
+</div>
