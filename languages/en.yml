@@ -1,10 +1,10 @@
 global:
   header:
-    search_placeholder: 'Search'
-    menu_home: 'Home'
-    menu_tag: 'Archives'
-    menu_github: 'Github'
-    menu_about: 'About'
+    menu_home: 'HOME'
+    menu_search: 'SEARCH'
+    menu_tag: 'ARCHIVES'
+    menu_github: 'GITHUB'
+    menu_about: 'ABOUT'
   footer:
     privacy_terms: 'Privacy & Terms'
 
