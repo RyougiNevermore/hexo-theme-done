@@ -47,6 +47,10 @@ body .done {
     color: rgb(255,64,129);
 }
 
+.done .text--grey {
+    color: grey;
+}
+
 /* header */
 .done .header {
     background-color: #041034;
