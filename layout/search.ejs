@@ -1,0 +1,21 @@
+<div class="page-content search">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col"></div>
+        <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="search_input">
+            <label class="mdl-textfield__label" for="sample1">Search what you want...</label>
+        </div>
+        <button class="mdl-cell mdl-cell--1-col mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="search_boot(); return false;">
+            <i class="material-icons">search</i>
+        </button>
+    </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col" id="posts_chips">
+            <% site.posts.forEach(function (post) { %>
+            <a href="<%- url_for(post.path) %>" class="mdl-chip">
+                <span class="mdl-chip__text"><%= post.title %></span>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</div>
