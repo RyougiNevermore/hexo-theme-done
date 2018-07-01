@@ -11,5 +11,5 @@ hexo.extend.helper.register('materialImageMap', function(str){
     if (h < 0) {
         h = h * -1;
     }
-    return 'material-' + (h % 19) + '.png';
+    return 'material-' + (h % 53) + '.jpg';
 });
