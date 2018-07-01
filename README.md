@@ -8,6 +8,7 @@
     npm install hexo-featured-image
     hexo new page about
     hexo new page tag
+    hexo new page search
 
 
 ## Usage
