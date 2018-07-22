@@ -5,7 +5,7 @@ function showDialog(_id) {
     }
     _id = '#' + _id;
     var dialog = document.querySelector(_id);
-    if (! dialog.showModal) {
+    if (!dialog.showModal) {
         dialogPolyfill.registerDialog(dialog);
     }
     dialog.showModal();
