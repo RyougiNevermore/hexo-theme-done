@@ -40,9 +40,24 @@ function search_boot() {
     });
 }
 
+// baidu url submit
+function baidu_url_submit() {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+}
+
 $(document).ready(function() {
     $('figure').each(function(i, block) {
         hljs.highlightBlock(block);
     });
+    baidu_url_submit();
 });
 
